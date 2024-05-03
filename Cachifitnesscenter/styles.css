@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    margin-top: -55px; /* Mueve el header hacia arriba para eliminar el espacio en blanco */
+}
+
+
+#main-header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s; /* Agrega una transición para suavizar el cambio */
+}
+#main-header.hidden {
+    top: -100px; /* Oculta el header moviéndolo hacia arriba */
+}
+.nombre-gym {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    margin: 0;
+    font-size: 24px;
+}
+
+header img {
+    max-width: 500px;
+    height: auto;
+    margin-top: 40px;
+}
+
+nav {
+    background-color: #333;
+    text-align: left;
+    padding: 10px 20px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1; /* Asegura que el menú esté por encima de otros elementos */
+}
+#nav-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 20px; /* Ajusta este valor para correr el menú hacia la derecha */
+    background-color: #333;
+    width: 200px; /* Ajusta el ancho del menú para evitar que se corte a la izquierda */
+}
+
+.nav-button {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #8ed1fc; /* Color celeste agua */
+}
+
+.nav-button:hover {
+    background-color: #a9e1ff; /* Color celeste agua más claro al pasar el mouse */
+}
+
+ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute; /* Cambia la posición para que el menú se mantenga visible */
+    top: 100%; /* Ajusta la posición vertical del menú desplegable */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+ul li {
+    display: block;
+}
+
+ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+ul li a:hover {
+    background-color: #555;
+}
+section {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

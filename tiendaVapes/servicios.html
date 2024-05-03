@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Vaper's Mae</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-image: url('fondovape.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+    }
+    
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1em;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .producto {
+        background-color: rgba(255, 255, 255, 0); /* Color de fondo con opacidad */
+        border: 1px solid #ddd;
+        margin: 1em;
+        padding: 1em;
+        width: 400px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .producto img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .fondo-oscuro .producto h2,
+    .fondo-oscuro .producto p {
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 0.2em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Nuestros servicios</h1>
+    </header>
+        <main>
+            <section id="productos">
+                <div class="producto">
+                    <img src="resistencia.jpg" alt="Resistencia">
+                    <p>Precio: 4000 colones</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Vaper's Mae</p>
+        </footer>
+    </body>
+    </html>

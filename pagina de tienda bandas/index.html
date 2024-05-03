@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Bandas Cachi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .producto {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 1em;
+            padding: 1em;
+            width: 400px;
+            text-align: center;
+            position: relative; 
+            z-index: 1; 
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .fondo-oscuro .producto h2,
+        .fondo-oscuro .producto p {
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.2em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax"></div>
+    <header>
+        <h1>Tienda Bandas Cachi</h1>
+        <label for="toggleFondo">Fondo Dinámico</label>
+        <input type="checkbox" id="toggleFondo" onchange="toggleFondo()">
+    </header>
+
+    <section>
+        <div class="producto">
+            <img src="promark2b.jpg" alt="promark2b">
+            <h2>Bolillos Promark 2B</h2>
+            <p>Precio: 10000 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <div class="producto">
+            <img src="Nova2B.jpg" alt="Nova2B">
+            <h2>Bolillos NOVA 2B</h2>
+            <p>Precio: 3500 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <div class="producto">
+            <img src="Sticks2B.jpg" alt="Sticks2B">
+            <h2>Bolillos Sticks 2B</h2>
+            <p>Precio: 2500 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <div class="producto">
+            <img src="cajalazer.jpg" alt="cajalazer">
+            <h2>Caja Lazer con flautas-sistema hechizo</h2>
+            <p>Precio: 90000 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <!-- Puedes agregar más productos según sea necesario -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Tienda Bandas Cachi</p>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollPosition = window.scrollY;
+            var parallax = document.querySelector('.parallax');
+            var header = document.querySelector('header');
+            var body = document.body;
+
+            if (fondoDinamico) {
+                var backgroundColor = 'rgb(' + (255 - scrollPosition % 256) + ',' + (255 - scrollPosition % 256) + ',' + (255 - scrollPosition % 256) + ')';
+                body.style.backgroundColor = backgroundColor;
+            }
+
+            parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+        });
+
+        var fondoDinamico = true;
+
+        function toggleFondo() {
+            fondoDinamico = !fondoDinamico;
+
+            var body = document.body;
+            var header = document.querySelector('header');
+
+            if (!fondoDinamico) {
+                body.classList.add('fondo-oscuro');
+                header.style.backgroundColor = '#444';
+            } else {
+                body.classList.remove('fondo-oscuro');
+                header.style.backgroundColor = '#333';
+            }
+        }
+    </script>
+</body>
+</html>

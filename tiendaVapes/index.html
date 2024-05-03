@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaper's Mae</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('fondovape.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .producto {
+    background-color: rgba(255, 255, 255, 0); /* Color de fondo con opacidad */
+    border: 1px solid #ddd;
+    margin: 1em;
+    padding: 1em;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .fondo-oscuro .producto h2,
+        .fondo-oscuro .producto p {
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.2em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax"></div>
+    <header>
+        <h1>Vaper's Mae</h1>
+        <p>Bienvenido a Vaper's Mae. Aquí puedes encontrar todo lo que necesitas para tu experiencia de vapeo.</p>
+        <a href="servicios.html">Ver nuestros servicios</a>
+    </header>
+
+    <section>
+        <div class="producto">
+            <img src="CARBON-FIBER.jpg" alt="CARBON-FIBER">
+            <h2>Vapo Drag Carbon Fiber</h2>
+            <p>Precio: 60.000 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <div class="producto">
+            <img src="maskking Ultra.jpg" alt="maskking Ultra">
+            <h2>Blackcurrant Ultra by Maskking 4000puff</h2>
+            <p>Precio: 12.000 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <div class="producto">
+            <img src="Fire ICE.jpg" alt="Fire ICE">
+            <h2>Aloe Grape & Pineapple Ice by Fire 7000puff</h2>
+            <p>Precio: 18.000 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <div class="producto">
+            <img src="FrioBar.jpg" alt="FrioBar">
+            <h2>Blue Razz Ice by FRIO BAR 7000puff</h2>
+            <p>Precio: 17.500 colones</p>
+            <a href="https://wa.me/50664720113" target="_blank"><button>Contactar por WhatsApp</button></a>
+        </div>
+
+        <!-- Puedes agregar más productos según sea necesario -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vaper's Mae</p>
+    </footer>
+</body>
+</html>

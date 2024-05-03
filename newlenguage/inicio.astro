@@ -1,0 +1,55 @@
+---
+const title = "Portafolio Minimalista";
+const projects = [
+  { title: "Proyecto 1", description: "Descripción breve del proyecto 1." },
+  { title: "Proyecto 2", description: "Descripción breve del proyecto 2." },
+  // Añade más proyectos si lo deseas
+];
+const socialLinks = [
+  { name: "LinkedIn", url: "[Enlace a tu perfil de LinkedIn]" },
+  { name: "GitHub", url: "[Enlace a tu perfil de GitHub]" },
+  // Añade más redes sociales si lo deseas
+];
+---
+<:head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <link rel="stylesheet" href="styles.css">
+</:head>
+<:body>
+  <header>
+    <h1>{title}</h1>
+  </header>
+  
+  <main>
+    <section id="about">
+      <h2>Sobre Mí</h2>
+      <p>¡Hola! Soy [Tu Nombre]. Soy un [Tu Profesión] apasionado por [Algo que te apasiona].</p>
+    </section>
+    
+    <section id="projects">
+      <h2>Proyectos</h2>
+      {#projects}
+        <div class="project">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      {/projects}
+    </section>
+    
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>Puedes contactarme en [correo electrónico] o a través de mis redes sociales:</p>
+      <ul>
+        {#socialLinks}
+          <li><a href="{url}">{name}</a></li>
+        {/socialLinks}
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Mi Portafolio</p>
+  </footer>
+</:body>

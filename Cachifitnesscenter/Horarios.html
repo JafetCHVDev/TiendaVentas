@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachi Fitness Center - Horarios</title>
+    <style>
+        /* Estilos para la página de horarios */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            flex-direction: column;
+            position: relative;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+            transition: top 0.3s;
+            top: 0;
+        }
+        header.hidden {
+            top: -55px;
+        }
+
+        
+        .horarios {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .horario {
+            width: 48%; /* El 48% del ancho para que haya un pequeño espacio entre los horarios */
+        }
+
+.nombre-gym {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    margin: 0;
+    font-size: 24px;
+}
+
+header img {
+    max-width: 500px;
+    height: auto;
+    margin-top: 40px;
+}
+
+nav {
+    background-color: #333;
+    text-align: left;
+    padding: 10px 20px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 1;
+}
+
+#nav-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    background-color: #333;
+    width: 200px;
+}
+
+.nav-button {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #8ed1fc;
+}
+
+.nav-button:hover {
+    background-color: #a9e1ff;
+}
+
+ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+ul li {
+    display: block;
+}
+
+ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+ul li a:hover {
+    background-color: #555;
+}
+
+section {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <img src="logogym.jpg" alt="logogym">
+        <h1 class="nombre-gym">Cachi Fitness Center</h1>
+    </header>
+    <nav>
+        <div class="nav-button" onclick="toggleNav()">Menú</div>
+        <ul id="nav-list">
+            <li><a href="index.html">Pagina Principal</a></li>
+            <li><a href="precios.html">Precios</a></li>
+        </ul>
+    </nav>
+    <div class="horarios">
+        <div class="horario">
+            <h2>Horario semanal</h2>
+            <p>Lunes, Martes, Miércoles, Jueves, Viernes</p>
+            <p>6:00am a 7:00am abierto sin instructores.</p> 
+            <p>7:00am a 10:30am abierto con instructores.</p> 
+            <p>10:30am a 3:00pm cerrado.</p> 
+            <p>3:00pm a 8:30pm abierto con instructores.</p> 
+        </div>
+        <div class="horario">
+            <h2>Horario fin de semana</h2>
+            <p>Sábado: 7:00am a 10:30am abierto con instructores.</p>
+        </div>
+    </div>
+    <script>
+        var lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                document.querySelector("header").classList.add("hidden");
+            } else {
+                document.querySelector("header").classList.remove("hidden");
+            }
+            lastScrollTop = currentScroll;
+        });
+    </script>
+</body>
+</html>
